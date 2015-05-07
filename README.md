@@ -54,5 +54,5 @@ docker run -it \
    --device /dev/dri/card0 \
    --device /dev/ttyUSB0 \
    --name stellarium \
-   jamesnetherton/stellarium --full-screen no --
+   jamesnetherton/stellarium --full-screen no
 ```
