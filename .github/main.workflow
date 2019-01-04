@@ -1,6 +1,6 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["GitHub Action for Docker-1"]
+  resolves = ["Docker Tag"]
 }
 
 action "GitHub Action for Docker" {
@@ -8,8 +8,8 @@ action "GitHub Action for Docker" {
   args = "build . -t jamesnetherton/stellarium:latest"
 }
 
-action "GitHub Action for Docker-1" {
-  uses = "actions/docker/cli@76ff57a"
+action "Docker Tag" {
+  uses = "actions/docker/tag@76ff57a"
   needs = ["GitHub Action for Docker"]
-  args = "tag jamesnetherton/stellarium:latest jamesnetherton/stellarium:${GITHUB_REF}"
+  args = "jamesnetherton/stellarium:latest jamesnetherton/stellarium --no-latest --no-sha"
 }
