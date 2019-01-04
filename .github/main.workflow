@@ -5,4 +5,5 @@ workflow "New workflow" {
 
 action "Docker Tag" {
   uses = "actions/docker/tag@master"
+  args = "-l -r"
 }
