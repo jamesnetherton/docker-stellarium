@@ -1,5 +1,5 @@
 workflow "New workflow" {
-  on = "push"
+  on = "create"
   resolves = ["Docker Tag"]
 }
 
