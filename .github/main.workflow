@@ -1,9 +1,9 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["Docker Tag"]
+  resolves = ["GitHub Action for Docker"]
 }
 
-action "Docker Tag" {
-  uses = "actions/docker/tag@master"
-  args = "-l -r"
+action "GitHub Action for Docker" {
+  uses = "actions/docker/cli@76ff57a"
+  args = "build . -t jamesnetherton/docker-atom-editor:latest"
 }
