@@ -11,5 +11,5 @@ action "GitHub Action for Docker" {
 action "GitHub Action for Docker-1" {
   uses = "actions/docker/cli@76ff57a"
   needs = ["GitHub Action for Docker"]
-  args = "tag jamesnetherton/stellarium:${GITHUB_REF}"
+  args = "tag jamesnetherton/stellarium:latest jamesnetherton/stellarium:${GITHUB_REF}"
 }
